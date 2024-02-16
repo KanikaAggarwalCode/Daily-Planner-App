@@ -13,4 +13,5 @@ The final website with a random generated password looks like below
 **Contributions**
 - Daily Planner Project developed by Kanika Aggarwal
 
-To visit my site just visit https://kanikaaggarwalcode.github.io/WeatherDashboard/
+To visit my site just visit
+https://kanikaaggarwalcode.github.io/Daily-Planner-App/
