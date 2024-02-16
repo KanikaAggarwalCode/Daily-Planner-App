@@ -25,3 +25,30 @@ $("#timePeriod-16 .description").val(localStorage.getItem("timePeriod-16"));
 $("#timePeriod-17 .description").val(localStorage.getItem("timePeriod-17"));
 
 
+var currentHour = dayjs().format('HH');
+
+for (let i =  9; i <  18; i++)
+{
+    var timePeriodElement = $(`.time-block#timePeriod-${i}`).attr('id');
+    var timeNumber = timePeriodElement.split("-")[1];
+
+    if (currentHour > timeNumber){
+        $(`.time-block#timePeriod-${i}`).addClass('past');
+        $(`.time-block#timePeriod-${i}`).removeClass('present');
+        $(`.time-block#timePeriod-${i}`).removeClass('future');
+    } else 
+    if  (currentHour == timeNumber)
+    {
+        $(`.time-block#timePeriod-${i}`).removeClass('past');
+        $(`.time-block#timePeriod-${i}`).addClass('present');
+        $(`.time-block#timePeriod-${i}`).removeClass('future');
+    }
+else 
+{
+    $(`.time-block#timePeriod-${i}`).removeClass('past');
+    $(`.time-block#timePeriod-${i}`).removeClass('present');
+    $(`.time-block#timePeriod-${i}`).addClass('future');
+}
+
+
+}
